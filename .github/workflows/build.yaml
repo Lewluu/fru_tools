@@ -11,10 +11,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-  steps:
-    - name: Build FRU TOOLS
-      uses: actions/checkout@v4
-      shell: bash
-      run: |
-        echo "Running 'make' command ..."
-        make
+    steps:
+      - name: Build FRU TOOLS
+        uses: actions/checkout@v4
+        shell: bash
+        run: |
+          echo "Running 'make' command ..."
+          make
