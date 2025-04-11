@@ -18,5 +18,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Build FRU TOOLS
         run: |
-          echo "Running 'make' command ..."
           make
+      - name: Archive build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: fru_tools-artifact
+          path: build/
