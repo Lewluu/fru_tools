@@ -13,8 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build FRU TOOLS
-        uses: actions/checkout@v4
-        shell: bash
+      - uses: actions/checkout@v4
         run: |
           echo "Running 'make' command ..."
           make
