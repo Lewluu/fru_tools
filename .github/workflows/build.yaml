@@ -19,8 +19,14 @@ jobs:
       - name: Build FRU TOOLS
         run: |
           make
-      - name: Archive build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: fru_tools-artifact
-          path: build/
+      # - name: Install FRU TOOLS
+      #   run: |
+      #     make install
+      - name: Test FRU TOOLS
+        run: |
+          fru-dump --version
+      # - name: Archive build artifacts
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: fru_tools-artifact
+      #     path: build/

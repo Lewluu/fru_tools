@@ -11,5 +11,8 @@
 *.so.*
 *.dylib
 
-# Build dir
-/build
+# Executables
+*.exe
+*.out
+*.app
+fru-dump
