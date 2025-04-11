@@ -19,7 +19,7 @@ MAIN_VERSION = $(VERSION)$(if $(PATCHLEVEL),.$(PATCHLEVEL)$(if $(SUBLEVEL),.$(SU
 
 BUILD_FLAGS = -DVERSION=\"$(MAIN_VERSION)\" -DVERSION_DATE=\"$(shell date '+%d%b%Y')\"
 
-BUILD_DIR = $(shell mkdir build)
+$(shell mkdir build)
 
 ALL:
 	@if ! test -f $(BUILD_NUMBER_FILE); then echo 0 > $(BUILD_NUMBER_FILE); fi
